@@ -1,181 +1,68 @@
 import TemplateItem from "./templateItem/TemplateItem"
+import templateData from "../../data/templates.json"
 
-// images
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import item1 from "../../images/items/item1.JPG"
-import item2 from "../../images/items/item2.JPG"
-import item3 from "../../images/items/item3.JPG"
-import item4 from "../../images/items/item4.JPG"
-import item5 from "../../images/items/item5.JPG"
-import item6 from "../../images/items/item6.JPG"
-import item7 from "../../images/items/item7.JPG"
-import item8 from "../../images/items/item8.JPG"
-import item9 from "../../images/items/item9.JPG"
-import item10 from "../../images/items/item10.JPG"
-import item11 from "../../images/items/item11.JPG"
-import item12 from "../../images/items/item12.JPG"
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 
 export default function Templates() {
 
-    const items = [
-
-        {
-            id: 1,
-            imageLink: item1,
-            alt: "item 1 "
-        },
-        {
-            id: 2,
-            imageLink: item2,
-            alt: "item image"
-        },
-        {
-            id: 3,
-            imageLink: item3,
-            alt: "item image"
-        },
-        {
-            id: 4,
-            imageLink: item4,
-            alt: "item image"
-        },
-        {
-            id: 5,
-            imageLink: item5,
-            alt: "item image"
-        },
-        {
-            id: 6,
-            imageLink: item6,
-            alt: "item image"
-        },
-        {
-            id: 7,
-            imageLink: item7,
-            alt: "item image"
-        },
-        {
-            id: 8,
-            imageLink: item8,
-            alt: "item image"
-        },
-        {
-            id: 9,
-            imageLink: item9,
-            alt: "item image"
-        },
-        {
-            id: 10,
-            imageLink: item10,
-            alt: "item image"
-        },
-        {
-            id: 11,
-            imageLink: item11,
-            alt: "item image"
-        },
-        {
-            id: 12,
-            imageLink: item12,
-            alt: "item image"
-        },
-    ];
-
-    const items2 = [
-
-        {
-            id: 1,
-            imageLink: item1,
-            alt: "item 1 "
-        },
-        {
-            id: 2,
-            imageLink: item2,
-            alt: "item image"
-        },
-        {
-            id: 3,
-            imageLink: item3,
-            alt: "item image"
-        },
-        {
-            id: 4,
-            imageLink: item4,
-            alt: "item image"
-        },
-        {
-            id: 5,
-            imageLink: item5,
-            alt: "item image"
-        },
-        {
-            id: 6,
-            imageLink: item6,
-            alt: "item image"
-        },
-        {
-            id: 7,
-            imageLink: item7,
-            alt: "item image"
-        },
-        {
-            id: 8,
-            imageLink: item8,
-            alt: "item image"
-        },
-        {
-            id: 9,
-            imageLink: item9,
-            alt: "item image"
-        },
-        {
-            id: 10,
-            imageLink: item10,
-            alt: "item image"
-        },
-        {
-            id: 11,
-            imageLink: item11,
-            alt: "item image"
-        },
-        {
-            id: 12,
-            imageLink: item12,
-            alt: "item image"
-        },
-    ];
 
     return (
 
-        <div className="templates-body">
+        <div className="w-screen h-screen">
 
             <h1 className="text-white text-5xl w-4/5 mt-28" dir="rtl"> نمونه کارها </h1>
             <p className="text-white text-2xl w-4/5 mt-6" dir="rtl"> روی عکس مورد نظر کلیک راست کنید و سپس لینک آن را کپی کنید.</p>
 
-            <div className="slider mb-44 mt-14">
 
-                <div className="slide-track">
+            <div className=" w-1/2 h-1/3 mx-auto mt-24">
 
+
+                <Swiper
+                    effect={'coverflow'}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+
+                    coverflowEffect={{
+
+                        rotate: 50,
+                        stretch: 2,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: false,
+                    }}
+
+                    pagination={false}
+                    modules={[EffectCoverflow]}
+
+                    className="h-full w-full rounded-xl"
+                >
 
                     {
-                        items.map((item) => (
-                            <TemplateItem key={item.id} image={item.imageLink} alt={item.alt} />
-                        ))
+                        templateData.map((template) => (
 
-                    }
+                            <SwiperSlide className="w-full h-full ">
+                                <img src={template.image} className="w-1/2 h-full shadow-xl shadow-white/25 rounded-lg opacity-85" alt="template image" />
+                            </SwiperSlide>
 
-                    {
-                        items2.map((item) => (
-                            <TemplateItem key={item.id} image={item.imageLink} alt={item.alt} />
                         ))
                     }
 
-                </div>
+                </Swiper>
 
             </div>
 
-        </div>
+        </div >
 
     )
 
