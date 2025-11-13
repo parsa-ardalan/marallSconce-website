@@ -36,11 +36,11 @@ export default function Header() {
 
         <div className="container grid grid-cols-2 mx-auto h-1/8 mt-3">
 
-            <div className="col-span-1">
-                <Image src={logo} alt="logo" className="w-36 -mt-3 -ml-3 hover:mt-0 duration-700" dir="ltr" />
+            <div className="col-spn-2 md:col-span-1">
+                <Image src={logo} alt="logo" className="w-36 ml-5 hover:mt-0 duration-700 md:-mt-3 md:-ml-3" dir="ltr" />
             </div>
 
-            <div className="flex col-span-1" dir="rtl">
+            <div className="hidden md:flex col-span-1" dir="rtl">
 
                 <div className="icon-box flex h-auto w-auto -mr-56 opacity-0 duration-1000">
 

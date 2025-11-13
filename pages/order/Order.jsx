@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Steps from "./steps/ShowSteps/ShowSteps"
-import ContactUS from "../contact-us/ContactUs"
+
 import Step1 from "./steps/step1/Step1";
 import Step2 from "./steps/step2/Step2";
 import Step3 from "./steps/step3/Step3";
@@ -148,9 +148,9 @@ export default function Order() {
 
         <div className="mx-auto w-2/3" dir="rtl">
 
-            <h1 className="text-white text-5xl text-right mt-16 select-none"> ثبت سفارش </h1>
+            <h1 className="text-white text-2xl md:text-5xl text-right mt-16 select-none"> ثبت سفارش </h1>
 
-            <p className="text-white text-2xl text-right mt-8 w-4/5 select-none" dir="rtl">
+            <p className="text-white text-sm w-full md:text-2xl text-right mt-8 md:w-4/5 select-none" dir="rtl">
 
                 جهت ثبت سفارش، لطفا سه مرحله پیش رو را با دقت انجام دهید.
 

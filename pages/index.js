@@ -21,16 +21,22 @@ export default function Home() {
 
       <div className="container mx-auto mt-10 h-3/4" dir="rtl">
 
-        <h1 className="text-white text-shadow-black text-shadow-md text-5xl mr-52 mt-32 font-bold"> شرکت دکوراسیون داخلی مارال </h1>
+        <h1 className="text-white text-shadow-black text-shadow-md text-xl mr-10 mt-20 font-bold md:text-5xl md:mr-52 md:mt-32"> شرکت دکوراسیون داخلی مارال </h1>
 
-        <p className="text-gray-300 text-2xl mr-56 mt-6 text-shadow-black text-shadow-sm">
+        <p className="text-gray-300 text-shadow-black text-shadow-sm mt-3 text-lg mr-10 md:text-2xl md:mr-56 md:mt-6">
           اجرای طرح لمسه در مکان هایی مانند اماکن تجاری، هتل ها، دفاتر و منزل...
         </p>
 
-     <Link href={"/order/Order"}> <button className="text-white text-xl border border-white hover:border-amber-500 hover:text-amber-500 duration-400 w-44 h-10 text-shadow-black text-shadow-md rounded-md mr-72 mt-16"> ثبت سفارش </button> </Link>
+        <div className="w-full h-10 flex mt-16 text-white text-sm md:text-lg md:h-12">
 
-        <Link href={"/templates/Templates"}><button className="text-white text-xl border border-white hover:border-amber-500 hover:text-amber-500 duration-400 w-44 h-10 text-shadow-black text-shadow-md rounded-md mr-4 mt-16"> نمونه کارها </button> </Link>
+          <Link href={"/order/Order"}> <button className="border border-white hover:border-amber-500 duration-400 w-24 h-full mr-14 text-shadow-black text-shadow-md rounded-md md:mr-72 md:w-44 "> ثبت سفارش </button> </Link>
+
+          <Link href={"/templates/Templates"}><button className=" border border-white hover:border-amber-500 duration-400 w-24 h-full text-shadow-black text-shadow-md rounded-md mr-4 md:w-44"> نمونه کارها </button> </Link>
+
+        </div>
+
       </div>
+
     </div>
 
   );
