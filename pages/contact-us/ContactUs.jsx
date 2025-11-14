@@ -2,11 +2,11 @@ import Image from "next/image";
 
 // icon images
 
-import telegram from "../../images/icons/telegram.png"
-import instagram from "../../images/icons/instagram.jpg"
-import whatsapp from "../../images/icons/whatsapp.png"
-import facebook from "../../images/icons/facebook.png"
-import eitaa from "../../images/icons/eitaa.png"
+import telegram from "../../public/images/icons/telegram.png"
+import instagram from "../../public/images/icons/instagram.jpg"
+import whatsapp from "../../public/images/icons/whatsapp.png"
+import facebook from "../../public/images/icons/facebook.png"
+import eitaa from "../../public/images/icons/eitaa.png"
 export default function ContactUS() {
 
     const hovering = () => {

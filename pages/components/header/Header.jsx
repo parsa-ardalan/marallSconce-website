@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import logo from "../../../images/main/logo.png"
+import logo from "../../../public/images/main/logo.png"
 import Link from "next/link";
 
 
